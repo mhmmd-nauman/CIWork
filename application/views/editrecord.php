@@ -2,7 +2,7 @@
 <?php 
     $this->load->helper("form");
 	echo form_open("mysite/editrecord");
-	
+	echo $message;echo"<br>";
 	echo form_label("Category Group Id: ", "catgroup_id");
 	$catid=array(
 	     "name"  => "catgroup_id",
@@ -38,7 +38,7 @@
 	);
 	echo form_textarea($catdescrip);
 	echo form_submit("addrecord", "Add Now");
-	
+	echo validation_errors('<p class="error"></p>');
 	
 	echo form_close();
 

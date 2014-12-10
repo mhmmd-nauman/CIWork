@@ -47,8 +47,8 @@
 		  margin:0 auto;
 		  padding:20px;
 	  }
-	   #contact{
-		  width:170px;
+	  #contact{
+		  width:178px;
 		  min-height:100%;
 		  margin:0 auto;
 		  padding:20px;
@@ -60,6 +60,10 @@
 		  padding:20px;
 		  color:#777;
 	  }
+	  .error{
+	  color:#F00;
+	  font-size:6px;
+	  background-color:#F00;}
 	</style>
 
 </head>

@@ -5,8 +5,10 @@ class Mysite extends CI_Controller {
 	function __construct()
     {
       parent::__construct();
+	  $this->load->helper("html","url");
 	  $this->load->database();
       $this->load->model('Mysitemodel');
+	  
     }
 
 	public function index()
@@ -95,28 +97,38 @@ class Mysite extends CI_Controller {
 		$this->load->view("site_footer");
 		
 				$config = array(
-					'upload_path'   => './asset/img',
-					'allowed_types' => 'gif|jpg|png',
-					'max_size'      => '100',
-					'max_width'     => '1024',
-					'max_height'    => '768',
-					'encrypt_name'  => true,
+						    'upload_path'   => "./asset/img",
+							'allowed_types' => "gif|jpg|png",
+							'max_size'      => "10000",
+							'max_width'     => "1024",
+							'max_height'    => "768",
+							'encrypt_name'  => true,
+							'remove_spaces' => TRUE,
+							'overwrite'     => false,
 				);
 				$this->load->library('upload', $config);
-				if (!$this->upload->do_upload()) {
-					$error = array('error' => $this->upload->display_errors());
-				   
+				if (!$this->upload->do_upload('catimage')) {
+					echo 'error';
+					exit;
+									    
 				}
 				$upload_data = $this->upload->data();
-		
+                $file = $upload_data['orig_name'];				
+		        if(file_exists($file))
+				{
 				$data_category = array(
 				'category_group_id' => $this->input->post('catgroup_id'),
 				'category_name'     => $this->input->post('catname'),
-				'category_img'      => $this->input->post('catimage'),
-				'category_descrip'  => $this->input->post('catdescrip')
+				'category_img'      => $file,
+				'category_descrip'  => $this->input->post('catdescrip'),
 				);
 				$this->load->model('mysitemodel');
 				$this->mysitemodel->form_insert_category($data_category);
+				}
+				else
+				{
+				  echo "This image already exist choose another image";	
+				}
         
 	  }
 		
@@ -129,6 +141,41 @@ class Mysite extends CI_Controller {
 		$this->load->view("site_footer");
 		
 	}
+	public function admin()
+	{
+		$data = array(
+               'title' => 'My Title',
+               'heading' => 'My Heading',
+               'message' => 'My Message'
+          );
+        $this->load->view("admin/cssfile");
+		$this->load->view("admin/headerfile");
+		$this->load->view("admin/mainsidebar");
+		$this->load->view("admin/dashboard_content", $data);
+		$this->load->view("admin/footer");
+		$this->load->view("admin/jsfile");
+		
+    }
+	public function index_content()
+	{
+		$this->load->view("admin/cssfile");
+		$this->load->view("admin/headerfile");
+		$this->load->view("admin/mainsidebar");
+		//$this->load->view("admin/index_content");
+		$this->load->view("admin/footer");
+		$this->load->view("admin/jsfile");
+		
+    }
+	public function news_content()
+	{
+		$this->load->view("admin/cssfile");
+		$this->load->view("admin/headerfile");
+		$this->load->view("admin/news_content");
+		$this->load->view("admin/footer");
+		$this->load->view("admin/jsfile");
+		
+    }
+	
 	
 	  
 }

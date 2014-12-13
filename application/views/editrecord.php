@@ -1,8 +1,9 @@
 <div id="contact">
 <?php 
     $this->load->helper("form");
-	echo form_open("mysite/editrecord");
+	echo form_open_multipart("mysite/editrecord");
 	echo $message;echo"<br>";
+	echo error_file_already;echo"<br>";
 	echo form_label("Category Group Id: ", "catgroup_id");
 	$catid=array(
 	     "name"  => "catgroup_id",

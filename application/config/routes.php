@@ -39,6 +39,7 @@
 */
 
 $route['default_controller'] = "mysite";
+$route['admin_controller'] = "admin";
 $route['pages/(:any)'] = "mysite/index";
 $route['404_override'] = '';
 

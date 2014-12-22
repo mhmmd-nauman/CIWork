@@ -145,19 +145,19 @@
                                     </div>
                                     <div class="modal-body">
                                       <div class="form">
-                                        <form class="form-horizontal">
+                                        <form class="form-horizontal" method="post" action="<?php echo base_url();?>mysite/admin/index_content">
                                           
                                           <div class="form-group">
                                             <label class="col-md-3 control-label">Icon <span class='require'>*</span></label>
                                             <div class="col-md-6">
-                                              <input type="text" class="form-control" id="inputContent" value="icon-sitemap">
+                                              <input type="text" class="form-control" id="inputContent" value="" placeholder="icon-sitemap" name="icon_core_bussiness">
                                               <div class="help-block">Please refer here for more <a href="icons.html" target="_blank">icon options.</a></div>
                                             </div>
                                           </div>
                                           <div class="form-group">
                                             <label class="col-md-3 control-label">Title <span class='require'>*</span></label>
                                             <div class="col-md-6">
-                                              <textarea name="inputContent" rows="2" class="form-control" id="inputContent">Telco Network Services</textarea>
+                                              <textarea name="title_core_bussiness" rows="2" class="form-control" id="inputContent" placeholder="icon_title"></textarea>
                                             </div>
                                           </div>
                                           
@@ -165,14 +165,15 @@
                                             <label class="col-md-3 control-label">Website URL </label>
                                             <div class="col-md-6">
                                               <div class="input-icon"><i class="fa fa-link"></i>
-                                                  <input type="text" placeholder="http://" class="form-control" value="http://www.ock.com.my/services_telecommunications_network.html"/>
+                                                  <input type="text" placeholder="http://" class="form-control" value="" name="url_core_bussiness"/>
                                               </div>
                                             </div>
                                             
                                           </div>
 
                                           <div class="form-actions">
-                                            <div class="col-md-offset-5 col-md-8"> <a href="#" class="btn btn-red">Save &nbsp;<i class="fa fa-floppy-o"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">Cancel &nbsp;<i class="glyphicon glyphicon-ban-circle"></i></a> </div>
+                                                                                  
+                                            <div class="col-md-offset-5 col-md-8">  <input type="submit" name="save_core_bussiness" id="save_core_bussiness" class="btn btn-red fa fa-floppy-o" value="Save"/> <input type="submit" name="cancel_core_bussiness" id="cancel_core_bussiness" class="btn btn-green fa fa-floppy-o" value="Cancel"/> </div>
                                           </div>
                                         </form>
                                       </div>
@@ -192,19 +193,19 @@
                                     </div>
                                     <div class="modal-body">
                                       <div class="form">
-                                        <form class="form-horizontal">
+                                         <form class="form-horizontal" method="post" action="<?php echo base_url();?>mysite/admin/index_content">
                                           
                                           <div class="form-group">
                                             <label class="col-md-3 control-label">Icon <span class='require'>*</span></label>
                                             <div class="col-md-6">
-                                              <input type="text" class="form-control" id="inputContent" value="icon-laptop">
+                                              <input type="text" class="form-control" id="inputContent" value="" name="icon_core_bussiness" placeholder="icon">
                                               <div class="help-block">Please refer here for more <a href="icons.html" target="_blank">icon options.</a></div>
                                             </div>
                                           </div>
                                           <div class="form-group">
                                             <label class="col-md-3 control-label">Title <span class='require'>*</span></label>
                                             <div class="col-md-6">
-                                              <textarea name="inputContent" rows="2" class="form-control" id="inputContent">Trading of Telco <br/>&amp; IT Products</textarea>
+                                              <textarea name="title_core_bussiness" rows="2" class="form-control" id="inputContent" placeholder="icon_title"></textarea>
                                             </div>
                                           </div>
                                           
@@ -212,14 +213,14 @@
                                             <label class="col-md-3 control-label">Website URL </label>
                                             <div class="col-md-6">
                                               <div class="input-icon"><i class="fa fa-link"></i>
-                                                  <input type="text" placeholder="http://" class="form-control" value="http://www.ock.com.my/services_trading_telecommunications_it.html"/>
+                                                  <input type="text" placeholder="http://" class="form-control" value="" name="url_core_bussiness"/>
                                               </div>
                                             </div>
                                             
                                           </div>
                                           
                                           <div class="form-actions">
-                                            <div class="col-md-offset-5 col-md-8"> <a href="#" class="btn btn-red">Save &nbsp;<i class="fa fa-floppy-o"></i></a>&nbsp; <a href="#" data-dismiss="modal" class="btn btn-green">Cancel &nbsp;<i class="glyphicon glyphicon-ban-circle"></i></a> </div>
+                                            <div class="col-md-offset-5 col-md-8">  <input type="submit" name="save_core_bussiness" id="save_core_bussiness" class="btn btn-red fa fa-floppy-o" value="Save"/> <input type="submit" name="cancel_core_bussiness" id="cancel_core_bussiness" class="btn btn-green fa fa-floppy-o" value="Cancel"/> </div>
                                           </div>
                                         </form>
                                       </div>

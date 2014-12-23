@@ -7,6 +7,7 @@ class Mysite extends CI_Controller {
 	function __construct()
     {
       parent::__construct();
+	// my test work
     }
 
 	public function index()

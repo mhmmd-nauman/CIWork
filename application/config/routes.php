@@ -38,11 +38,9 @@
 |
 */
 
-$route['default_controller'] = "mysite";
-$route['admin_controller'] = "admin";
-$route['pages/(:any)'] = "mysite/index";
-$route['404_override'] = '';
-
+$route['default_controller'] = "page";
+$route['404_override'] = 'page';
+$route['article/(:num)/(:any)'] = 'article/index/$1/$2';
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

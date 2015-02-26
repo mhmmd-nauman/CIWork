@@ -14,10 +14,7 @@ class Migration_Create_Group extends CI_Migration {
 				'type' => 'INT',
 				'constraint' => '11',
 			),
-			'ClassName' => array(
-				'type' => 'ENUM',
-				'constraint' => '128',
-			),
+			
 			'Created' => array(
 				'type' => 'DATETIME',
 				'constraint' => '6',
@@ -34,7 +31,7 @@ class Migration_Create_Group extends CI_Migration {
 				'type' => 'DATETIME',
 				'constraint' => '6',
 			),
-                    '	Code' => array(
+                    'Code' => array(
 				'type' => 'VARCHAR',
 				'constraint' => '100',
 			),
